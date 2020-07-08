@@ -1,45 +1,50 @@
 ---
+title: I'd Rather Be Writing
 layout: page
-description: "阅读使人充实，会谈使人敏捷，写作使人精确"
+focus: homepage
+jtype: homepage
+focus: noform
 ---
+<div class="post-content">
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+    <div class="home-post-title">
+        {% for post in paginator.posts %}
+      {% unless post.categories contains "family" %}
+
+        <div class="entry"><a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="home-post-meta">
+                {{ post.date | date: "%b %-d, %Y" }} &#8226;
+                {% for cat in post.categories %}
+                <a href="{{ "/category-" | prepend: site.baseurl | append: cat}}">{{cat}}</a>{% unless forloop.last %}, {% endunless%}
+                {% endfor %}
+                 &#8226; <a href="{{ post.url }}#commento"></a>
+            </div>
+            <div>{% if post.image %}
+                <div class="thumb"> <a href="{{ post.url }}"><img src="{{post.image}}" alt="{{post.title}}"/></a>
+                </div>
+                {% endif %}
+                <div class="homepageSummary">{{post.description}}</div>
+
+            </div>
+            <div style="clear:left;"></div>
+            {% endunless %}
+            {% endfor %}
+
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%Y-%m-%d" }}  
-		{% if post.times %}
-            {{ post.times }}
-        {% endif %}
-    </p>
-</div>
-<hr>
-{% endfor %}
+    </div>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+    <!-- Pagination links -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}/" class="previous">&laquo; Previous</a>
+        {% else %}
+        <span class="previous">&laquo; Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}/" class="next">&raquo; Next</a>
+        {% else %}
+        <span class="next ">&raquo; Next</span>
+        {% endif %}
+    </div>
+</div>

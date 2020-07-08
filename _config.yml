@@ -1,150 +1,180 @@
-# Site settings
-title: 陈松的技术博客
-SEOTitle: 陈松的技术博客 | CS Blog
-header-img: img/post-bg-desk.jpg
-email: chensongbj25@gmail.com
-description: "Every failure is leading towards success."
-keyword: "陈松的技术博客, 陈松C/C++ blog, 游戏服务器, 高并发, 高可用的服务器"
-url: "https://chensongpoixs.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/chensongpoixs/chensongpoixs.github.io.git" # you code repository
-
-plugins:
-  - jekyll-sitemap
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-# [2019      ] 北京的程序员是一群优秀、刻苦、多金、秃顶、穿格子衫的男人
-# [2019      ] 一个对代码追求极致的人, 可是我不知道什么时候即忘记我的初心。我有一点后悔可是我没有办法我选择不了,我只能不停努力追求初心的我
-# [2019      ] 你不能背下的书,总有人能背下来。你愿意拖到明天的事,总有人今天就做完了,那么不好意思, 你想去的地方只能别人去了, 你喜欢人的也会选择更优秀的,你想过的人生也只能别人过了。
-# [2020-03-29] 生活只会越来越难, 而你将越来越优秀  ^_^   ^_^  
-# [2020-03-29] 不是生活所迫, 谁也不想十八般武艺样样精通  _^_^_ 
-# [2020-03-29] 我们在黑暗中坚守光明，时间会告诉你一切答案，而生活的经历让你领悟，只有历经坎坷才知道一切都是最好的安排。我们会胡思乱想会埋怨生活的不公，会遇到挑战会受挫，但我们要咬牙坚持，我们需要时间的积淀才能让自己成长。努力，是我们的资本，不畏惧是前进的力量。我所有的疯狂都是为了明天的太阳，你一直苦苦寻找的答案也许就藏在心底。希望释然后的你，不再犹豫，不再畏惧，不再抱怨，不再放弃。希望在下一个黑夜来临时我们可以心里有光，永远明亮。
-# [2020-06-07] 我的才华还撑不起自己的野心时,我就应该静下心来学习。 我的能力实现不了自己梦想时,我就应该沉下心练习。
-# [2020-06-07] 谦虚、谨慎、不骄、不躁
-sidebar-about-description: "谦虚、谨慎、不骄、不躁"     
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
-# SNS settings
-RSS: true
-# weibo_username:     chensongpoixs
-zhihu_username:     chensong-1-90
-csdn_username:		Poisx
-github_username:    chensongpoixs
-#facebook_username:  chensongpoixs
-jianshu_username:   c5bcb0434259
-#twitter_username:   chensongpoixs
-email_account:      chensongbj25@gmail.com
-
-
-
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
-
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-# !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
-# Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
-markdown: kramdown
+title: "I'd Rather Be Writing - Tom Johnson"
+name: "I'd Rather Be Writing"
+description: Technical writing blog focusing on the latest trends, news, and other topics in the field of technical communication.
+media: https://s3.us-west-1.wasabisys.com/idbwmedia.com/
+host: 127.0.0.1
+port: 4029
+feedback_email: tomjoht@gmail.com
+sidebar_accordion: true
+markdown: redcarpet
+show_audience_label: true
+output: web
+paginate: 15
+timezone: America/Los_Angeles
 highlighter: rouge
+markdown: kramdown
 kramdown:
   input: GFM
-# https://github.com/jekyll/jekyll/pull/4090
-#  syntax_highlighter: rouge
+  auto_ids: true
+  syntax_highlighter: rouge
 
-# Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
-# span, block element options fall back to global
-#  syntax_highlighter_opts:
-# Rouge Options › https://github.com/jneen/rouge#full-options
-#    css_class: 'highlight'
-#line_numbers: true # bad idea, spans don't need linenos and would inherit this option
-#    span:
-#      line_numbers: false
-#    block:
-#      line_numbers: true
-#      start_line: 1
-      
-duoshuo_share: true  
+format: web
+plugins:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-seo
 
-# 评论系统
-# Disqus（https://disqus.com/）
-disqus_username: chensongpoixs-github-io-1
+url: https://idratherbewriting.com
+
+exclude:
+  - _drafts
+  - .idea
+  - _site
+  - vendor
+
+# this enables collections
+collections:
+  restapicourse:
+    output: true
+  publishingapidocs:
+    output: true
+  voiceovertechniques:
+    output: true
+  visualcommunication:
+    output: true
+  podcasts:
+    output: true
+  youngadultnovel:
+    output: true
+  user_centered_doc:
+    output: true
+# these are defaults that get applied to each page or post's frontmatter. leave as is.
+permalink: /:year/:month/:day/:title/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: true
+      author: <a href='/aboutme/'>Tom Johnson</a>
+  -
+    scope:
+      path: ""
+      type: "tooltips_demo"
+    values:
+      layout: "page"
+      search: true
+  -
+    scope:
+      path: ""
+      type: "restapicourse"
+    values:
+      layout: "page_restapicourse"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "podcasts"
+    values:
+      layout: "itunes"
+
+  -
+    scope:
+      path: ""
+      type: "visualcommunication"
+    values:
+      layout: "page_visualcommunication"
+      comments: true
+      search: true
+
+  -
+    scope:
+      path: ""
+      type: "youngadultnovel"
+    values:
+      layout: "page_yanovel"
+
+  -
+    scope:
+      path: ""
+      type: "user_centered_doc"
+    values:
+      layout: "page_user_centered_doc"
+      comments: true
+      search: true
+
+target: web
+
+## itunes feed settings
+
+podcast_url: https://www.idratherbewriting.com
+podcast_album_art: https://s3.us-west-1.wasabisys.com/idbwmedia.com/images/idratherbewritinglogo.png
+podcast_title: I'd Rather Be Writing Podcast
+podcast_owner: Tom Johnson
+podcast_email: tomjoht@gmail.com
+podcast_category: Technology
+podcast_explicit: "no"
+podcast_author: Tom Johnson
+podcast_description: Topics and issues for technical writers. Improve your technical communication role. Empower users with better documentation.
+podcast_summary: A technical writing podcast about the latest trends and practices in the field of technical communication. Technical communication includes topics like technical writing (software help), information architecture, usability, API documentation, information design, web design, illustration, DITA, structured authoring, visual communication, and more. If you're a technical writer or interested in technical writing, this is the one of few podcasts in this niche. I also have a blog at https://idratherbewriting.com where the podcasts and other blog topics are published.
+podcast_subtitle: Technical writing trends, innovations, and news. Content original from idratherbewriting.com. Hosted by Tom Johnson.
 
 
-# about background music
-#about:
-#  enable: true    #是否开启muisc
-#  music_url: https://github.com/chensongpoixs/chensongpoixs.github.io/blob/master/music/about.mp3
+####### Algolia configuration ###########
+algolia:
+  application_id: XUM0ZBII9L
+  index_name: idratherbewriting
+  search_only_api_key: aa11df1f45809fcdfb5b7bc89a301682
+  files_to_exclude:
+    - ./*.html
+    - redirects/*
+    - files/**/*
+    - pages/category-archives/*
+    - pages/date-based-archives/*
+  nodes_to_index: 'p,.description'
+eventbrite_public_token: FUQRFCCTNLYIUXJZQCSV
 
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 68eab7a4e477a095f0fe                            #生成的clientID
-  clientSecret: 2d99a84787d60946674b419700c43dda76e6d121    #生成的clientSecret
-  repo: chensongpoixs.github.io    #仓库名称
-  owner: chensongpoixs    #github用户名
-  admin: chensongpoixs
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-#
-# 统计
+####### jekyll seo tag configuration #######
+title: I'd Rather Be Writing
+tagline: Technical writing blog focusing on the latest trends, news, and other topics in the field of technical communication.
+description: This blog covers topics in technical writing, technical communication, API documentation, and other topics.
+url: https://idratherbewriting.com
+author:
+  twitter: tomjohnson
+twitter:
+  username: tomjohnson
+  card: summary
 
-# Analytics settings
-#Baidu Analytics
-#ba_track_id: 11ea1e5954a4193d6dc9aa404767aa89
+logo: https://s3.us-west-1.wasabisys.com/idbwmedia.com/images/idratherbewriting-site-logo.png
 
-#用户名 -- 15850774503-> two  -> 17319217372
-ba_track_id: e4d3c801e2dcc7346b7cc4e86ad11344
-# <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=EdHnn2fbyH87WRK-nkhOVwaOBQnf9jOHmZEMZhsIq08"></script>
+social:
+  name: Tom Johnson
+  links:
+    - https://twitter.com/tomjohnson
+    - https://www.facebook.com/tomidbw
+    - https://www.linkedin.com/in/tomjoht/
+    - https://github.com/tomjoht
 
-# Google Analytics
-ga_track_id: 'UA-131362317-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+facebook:
+  app_id: 247143161970549
+  publisher: 3968842976464
 
+webmaster_verifications:
+  google: i1qwK1LFgKEQHUtpm8o7OOOeK9i54NUQwKR4vXRqlFs
+  bing: 352636FE6BAFC693A6938983FC6A227E
 
-
-
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-
-
-# Friends
-friends: [
-    {
-        title: "CSDN",
-        href: "https://blog.csdn.net/Poisx"
-    },{
-        title: "简·书",
-        href: "http://www.jianshu.com/u/c5bcb0434259"
-    },{ 
-        title: "GitHub",
-        href: "https://github.com/chensongpoixs"
-    }
-]
+lang: en_US
