@@ -1,36 +1,51 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
-header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+title: 陈松的技术博客
+SEOTitle: 陈松的技术博客 | CS Blog
+header-img: img/post-bg-desk.jpg
+email: chensongbj25@gmail.com
+description: "Every failure is leading towards success."
+keyword: "陈松的技术博客, 陈松C/C++ blog, 游戏服务器, 高并发, 高可用的服务器"
+url: "https://chensongpoixs.github.io"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/chensongpoixs/chensongpoixs.github.io.git" # you code repository
 
-# Publish posts or collection documents with a future date.
-future: true
+plugins:
+  - jekyll-sitemap
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+# [2019      ] 北京的程序员是一群优秀、刻苦、多金、秃顶、穿格子衫的男人
+# [2019      ] 一个对代码追求极致的人, 可是我不知道什么时候即忘记我的初心。我有一点后悔可是我没有办法我选择不了,我只能不停努力追求初心的我
+# [2019      ] 你不能背下的书,总有人能背下来。你愿意拖到明天的事,总有人今天就做完了,那么不好意思, 你想去的地方只能别人去了, 你喜欢人的也会选择更优秀的,你想过的人生也只能别人过了。
+# [2020-03-29] 生活只会越来越难, 而你将越来越优秀  ^_^   ^_^  
+# [2020-03-29] 不是生活所迫, 谁也不想十八般武艺样样精通  _^_^_ 
+# [2020-03-29] 我们在黑暗中坚守光明，时间会告诉你一切答案，而生活的经历让你领悟，只有历经坎坷才知道一切都是最好的安排。我们会胡思乱想会埋怨生活的不公，会遇到挑战会受挫，但我们要咬牙坚持，我们需要时间的积淀才能让自己成长。努力，是我们的资本，不畏惧是前进的力量。我所有的疯狂都是为了明天的太阳，你一直苦苦寻找的答案也许就藏在心底。希望释然后的你，不再犹豫，不再畏惧，不再抱怨，不再放弃。希望在下一个黑夜来临时我们可以心里有光，永远明亮。
+# [2020-06-07] 我的才华还撑不起自己的野心时,我就应该静下心来学习。 我的能力实现不了自己梦想时,我就应该沉下心练习。
+# [2020-06-07] 谦虚、谨慎、不骄、不躁
+sidebar-about-description: "谦虚、谨慎、不骄、不躁"     
+sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
 
 # SNS settings
-RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+RSS: true
+# weibo_username:     chensongpoixs
+zhihu_username:     chensong-1-90
+csdn_username:		Poisx
+github_username:    chensongpoixs
+#facebook_username:  chensongpoixs
+jianshu_username:   c5bcb0434259
+#twitter_username:   chensongpoixs
+email_account:      chensongbj25@gmail.com
 
 
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN  
 
 
 
@@ -46,46 +61,71 @@ plugins: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+# !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
+# Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
 markdown: kramdown
+highlighter: rouge
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-  syntax_highlighter_opts:
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+  input: GFM
+# https://github.com/jekyll/jekyll/pull/4090
+#  syntax_highlighter: rouge
+
+# Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+# span, block element options fall back to global
+#  syntax_highlighter_opts:
+# Rouge Options › https://github.com/jneen/rouge#full-options
+#    css_class: 'highlight'
+#line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+#    span:
+#      line_numbers: false
+#    block:
+#      line_numbers: true
+#      start_line: 1
+      
+duoshuo_share: true  
+
+# 评论系统
+# Disqus（https://disqus.com/）
+disqus_username: chensongpoixs-github-io-1
 
 
+# about background music
+#about:
+#  enable: true    #是否开启muisc
+#  music_url: https://github.com/chensongpoixs/chensongpoixs.github.io/blob/master/music/about.mp3
 
-# Disqus settings
-disqus_username: hux
-
-# Netease settings
-netease_comment: false
-
-
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 68eab7a4e477a095f0fe                            #生成的clientID
+  clientSecret: 2d99a84787d60946674b419700c43dda76e6d121    #生成的clientSecret
+  repo: chensongpoixs.github.io    #仓库名称
+  owner: chensongpoixs    #github用户名
+  admin: chensongpoixs
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+#
+# 统计
 
 # Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
+#Baidu Analytics
+#ba_track_id: 11ea1e5954a4193d6dc9aa404767aa89
+
+#用户名 -- 15850774503-> two  -> 17319217372
+ba_track_id: e4d3c801e2dcc7346b7cc4e86ad11344
+# <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=EdHnn2fbyH87WRK-nkhOVwaOBQnf9jOHmZEMZhsIq08"></script>
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-131362317-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
 
 
 
@@ -95,42 +135,16 @@ service-worker: true
 
 
 
-# MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
-
-
-
 # Friends
 friends: [
     {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "乱序",
-        href: "http://mida.re/"
+        title: "CSDN",
+        href: "https://blog.csdn.net/Poisx"
     },{
-        title: "Sherry Wu",
-        href: "https://xuechundesign.github.io"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "简·书",
+        href: "http://www.jianshu.com/u/c5bcb0434259"
+    },{ 
+        title: "GitHub",
+        href: "https://github.com/chensongpoixs"
     }
 ]

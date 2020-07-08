@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "我干了什么 究竟拿了时间换了什么"
+description: "阅读使人充实，会谈使人敏捷，写作使人精确"
 ---
 
 {% for post in paginator.posts %}
@@ -15,15 +15,14 @@ description: "我干了什么 究竟拿了时间换了什么"
         </h3>
         {% endif %}
         <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
+            {{ post.content | strip_html | truncate:200 }}
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%Y-%m-%d" }}  
+		{% if post.times %}
+            {{ post.times }}
+        {% endif %}
     </p>
 </div>
 <hr>
@@ -34,12 +33,12 @@ description: "我干了什么 究竟拿了时间换了什么"
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
     </li>
     {% endif %}
 </ul>
