@@ -1,10 +1,10 @@
-title: "I'd Rather Be Writing - Tom Johnson"
+title: "I'd Rather Be Writing - David CHEN"
 name: "I'd Rather Be Writing"
 description: Technical writing blog focusing on the latest trends, news, and other topics in the field of technical communication.
 media: https://s3.us-west-1.wasabisys.com/idbwmedia.com/
 host: 127.0.0.1
 port: 4029
-feedback_email: tomjoht@gmail.com
+feedback_email: drchen.gw@gmail.com
 sidebar_accordion: true
 markdown: redcarpet
 show_audience_label: true
@@ -26,7 +26,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo
 
-url: https://idratherbewriting.com
+url: https://davidnsw.github.io/th/
 
 exclude:
   - _drafts
@@ -121,14 +121,14 @@ target: web
 
 ## itunes feed settings
 
-podcast_url: https://www.idratherbewriting.com
+podcast_url: https://davidnsw.github.io/th/
 podcast_album_art: https://s3.us-west-1.wasabisys.com/idbwmedia.com/images/idratherbewritinglogo.png
 podcast_title: I'd Rather Be Writing Podcast
-podcast_owner: Tom Johnson
-podcast_email: tomjoht@gmail.com
+podcast_owner: David CHEN
+podcast_email: drchen.gw@gmail.com
 podcast_category: Technology
 podcast_explicit: "no"
-podcast_author: Tom Johnson
+podcast_author: David CHEN
 podcast_description: Topics and issues for technical writers. Improve your technical communication role. Empower users with better documentation.
 podcast_summary: A technical writing podcast about the latest trends and practices in the field of technical communication. Technical communication includes topics like technical writing (software help), information architecture, usability, API documentation, information design, web design, illustration, DITA, structured authoring, visual communication, and more. If you're a technical writer or interested in technical writing, this is the one of few podcasts in this niche. I also have a blog at https://idratherbewriting.com where the podcasts and other blog topics are published.
 podcast_subtitle: Technical writing trends, innovations, and news. Content original from idratherbewriting.com. Hosted by Tom Johnson.
@@ -154,20 +154,20 @@ tagline: Technical writing blog focusing on the latest trends, news, and other t
 description: This blog covers topics in technical writing, technical communication, API documentation, and other topics.
 url: https://idratherbewriting.com
 author:
-  twitter: tomjohnson
+  twitter: davidnsw
 twitter:
-  username: tomjohnson
+  username: davidnsw
   card: summary
 
 logo: https://s3.us-west-1.wasabisys.com/idbwmedia.com/images/idratherbewriting-site-logo.png
 
 social:
-  name: Tom Johnson
+  name: David CHEN
   links:
-    - https://twitter.com/tomjohnson
-    - https://www.facebook.com/tomidbw
-    - https://www.linkedin.com/in/tomjoht/
-    - https://github.com/tomjoht
+    - https://twitter.com/davidnsw
+    - https://www.facebook.com/davidnsw
+    - https://www.linkedin.com/in/davidnsw/
+    - https://github.com/davidnsw
 
 facebook:
   app_id: 247143161970549
