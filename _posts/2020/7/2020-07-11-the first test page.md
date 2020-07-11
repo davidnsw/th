@@ -1,8 +1,8 @@
 ---
-title: this is the captions of this test
+title: this is the captions of this test1
 permalink: /blog/-this-is-a-test-one/
 subtitle: "Part I: Introduction and background"
-date: 2020-07-11 01:00:000000000 -07:00
+date: 2020-07-11 02:00:000000000 -07:00
 categories:
 - technical-writing
 keywords: layoff, value, low estimation, low-value, hierarchy
