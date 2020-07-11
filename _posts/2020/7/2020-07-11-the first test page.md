@@ -23,20 +23,6 @@ The recent guest post by Jeremy Rosselot-Merritt on [why technical writers are t
 you can always find me through [here](https://davidnsw.github.io/th/contact/).
 
 
----
-layout: post
-title:  "推荐一些值得看的在线课程"
-date:   2020-06-10
-categories: Study
-tags: course study casualtime
-author: David
-excerpt: 一些值得看的在线公开课介绍，涉及法学、计算机、社会学、哲学、经济学、管理学、文学、语言学、传播学、政治学、医学和环境学方面。Enjoy~
-top: true
----
-
-* content
-{:toc}
-
 ![](https://gw.alicdn.com/tfs/TB1yLBduDqWBKNjSZFAXXanSpXa-800-600.gif)
 
 ## 法学
