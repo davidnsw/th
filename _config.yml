@@ -71,7 +71,7 @@ defaults:
       layout: "post"
       comments: true
       search: true
-      author: <a href='/aboutme/'>David CHEN</a>
+      author: <a href='/aboutme/'>Tom Johnson</a>
   -
     scope:
       path: ""
